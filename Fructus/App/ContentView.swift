@@ -15,7 +15,7 @@ struct ContentView: View {
     // MARK: - BODY
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List {
                 ForEach(fruits.shuffled()) { item in
                     NavigationLink(destination: FruitDetailView(fruit: item)) {
@@ -38,6 +38,7 @@ struct ContentView: View {
                 }
             }
         } //: NAVIGATION
+        
     }
 }
 
